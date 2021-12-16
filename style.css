@@ -5,57 +5,63 @@
 
 body {
   background-color: lightgray;
-  position: relative;
 }
 
 .nav {
-  position: absolute;
+  display: flex;
   background-color: grey;
+  display: flex;
   width: 100%;
   height: 80px;
+  align-items: center;
 }
 
-.nav ul li {
-  display: inline;
-  margin: 10px;
-
-}
 .palavras {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   position: absolute;
   right: 400px;
   list-style: none;
-  display: inline-block;
   color: black;
-  top: 30px;
+  justify-content: space-evenly;
 }
+
+.nav span {
+  position: relative;
+  margin-left: 100px;
+  display: flex;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+}
+
 .lupa {
   background-color: white;
   border-radius: 50px;
   width: 200px;
   height: 30px;
   position: absolute;
-  right: 150px;
-  top: 20px;
+  display: flex;
+  right: 100px;
   border-style: none;
+  flex-wrap: wrap;
 }
-.nav span {
-  position: relative;
-  left: 150px;
-  top: 30px;
-  font-size: 20px;
-  cursor: pointer;
-}
-.nav a:hover {
-  cursor: pointer;
+.container {
+  display: flex;
+  height: auto;
+  justify-content: center;
 }
 .todo {
-  position: absolute;
-  top: 120px;
-  left: 450px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 10px;
-  row-gap: 2em;
+  display: flex;
+  width: 1000px;
+  height: auto;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .noticias {
@@ -63,19 +69,38 @@ body {
   background-color: white;
   width: 300px;
   height: 400px;
-  position: relative;
+  display: flex;
 }
 
 .footer {
-  position: fixed;
   background-color: grey;
   width: 100%;
   height: 80px;
-  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.footer p {
-  text-align: center;
-  top: 30px;
-  position: relative;
+
+/*Medias Querys*/
+
+@media (max-width:600px) {
+  .todo {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0px;
+  }
+}
+
+@media (max-width:1200px) {
+  .todo {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+@media (max-width: 1050px) {
+  .palavras , .lupa{
+    display: none;
+  }
 }
