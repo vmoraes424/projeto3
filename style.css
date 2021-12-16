@@ -15,7 +15,7 @@ body {
   align-items: center;
   justify-content: space-around;
 }
-.esquerda {
+.direita {
   display: flex;
   align-items: center;
 }
@@ -95,20 +95,7 @@ body {
 
 /*Medias Querys*/
 
-@media (max-width:600px) {
-  .todo {
-    display: flex;
-    flex-flow: column wrap;
-    margin: 0px;
-  }
-}
 
-@media (max-width:1200px) {
-  .todo {
-    display: flex;
-    flex-flow: row wrap;
-  }
-}
 
 @media (max-width: 700px) {
   .palavras , .lupa{
